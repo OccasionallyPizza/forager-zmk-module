@@ -112,17 +112,13 @@
             >;
         };
 
-        // LAYER 3: ADJ / OS-SWAP (The "Mac" Mode)
-        // When you activate this layer, the roles of LGUI and LALT are swapped.
+	// LAYER 3: ADJ / SYSTEM
         adj {
             bindings = <
-            &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_CLR_ALL                                  &kp C_SLEEP     &trans          &trans          &kp C_BRI_DN    &kp C_BRI_UP
-            &studio_unlock  &trans          &trans          &trans          &trans                                          &trans          &trans          &trans          &kp C_VOL_DN    &kp C_VOL_UP
-            &bootloader     &trans          &trans          &trans          &trans                                          &trans          &trans          &trans          &trans          &bootloader
-            // SWAP LOGIC: 
-            // If L_CORNER was LGUI and L_THUMB was LALT... 
-            // Now L_CORNER is LALT and L_THUMB is LGUI.
-            &kp LALT        &trans          &trans          &trans          &trans                                          &trans          &trans          &trans          &kp C_BRI_DN    &kp C_BRI_UP
+            &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_CLR_ALL                                   &kp C_SLEEP     &trans          &trans          &kp C_BRI_DN    &kp C_BRI_UP
+            &studio_unlock  &trans          &trans          &trans          &trans                                           &trans          &trans          &trans          &kp C_VOL_DN    &kp C_VOL_UP
+            &bootloader     &trans          &trans          &trans          &trans                                           &trans          &trans          &trans          &trans          &bootloader
+            &trans          &trans                                           &trans          &trans
             >;
         };
     };
