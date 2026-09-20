@@ -2,6 +2,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <behaviors/rgbled_widget.dtsi>  // battery stats light widgets
 //adding to enable me to update :D
 #define BASE 0
 #define NAV  1
@@ -116,7 +117,7 @@
         adj {
             bindings = <
             &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_CLR_ALL                                   &kp C_SLEEP     &trans          &trans          &kp C_BRI_DN    &kp C_BRI_UP
-            &studio_unlock  &trans          &trans          &trans          &trans                                           &trans          &trans          &trans          &kp C_VOL_DN    &kp C_VOL_UP
+            &studio_unlock  &trans          &trans          &trans          &trans                                           &trans          &ind_bat        &trans          &kp C_VOL_DN    &kp C_VOL_UP
             &bootloader     &trans          &trans          &trans          &trans                                           &trans          &trans          &trans          &trans          &bootloader
             &trans          &trans                                           &trans          &trans
             >;
