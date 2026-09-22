@@ -7,6 +7,7 @@
 #define NAV  1
 #define SYM  2
 #define ADJ  3
+#define GAME 4
 
 #define AS(keycode) &as LS(keycode) keycode     // Autoshift Macro
 #define MEH LS(LC(LALT))
@@ -116,7 +117,7 @@
         adj {
             bindings = <
             &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_CLR_ALL                                   &kp C_SLEEP     &trans          &trans          &kp C_BRI_DN    &kp C_BRI_UP
-            &studio_unlock  &trans          &trans          &trans          &trans                                           &trans          &ind_bat        &tog game       &kp C_VOL_DN    &kp C_VOL_UP
+            &studio_unlock  &trans          &trans          &trans          &trans                                           &trans          &ind_bat        &tog GAME       &kp C_VOL_DN    &kp C_VOL_UP
             &bootloader     &trans          &trans          &trans          &trans                                           &trans          &trans          &trans          &trans          &bootloader
                          f                   &trans          &trans          &trans          &trans
             >;
@@ -126,9 +127,9 @@
 	game {
             bindings = <
             &kp TAB         &kp Q           &kp W           &kp E           &kp R                                           &trans          &trans          &trans          &trans          &trans
-            &kp LCTRL       &kp A           &kp S           &kp D           &kp F                                           &trans          &ind_bat        &tog game       &trans          &trans
+            &kp LCTRL       &kp A           &kp S           &kp D           &kp F                                           &trans          &ind_bat        &tog GAME       &trans          &trans
             &kp LSHFT       &kp Z           &kp X           &kp C           &kp V                                           &trans          &trans          &trans          &trans          &trans
-            &kp SPACE          &kp SPACE                                           &trans          &trans
+                                             &kp SPACE       &kp SPACE       &trans          &trans
             >;
         };
     };
