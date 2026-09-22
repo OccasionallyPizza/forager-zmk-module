@@ -97,7 +97,7 @@
         nav {
             bindings = <
             &kp ESC         &trans          &trans          &trans          &trans                                          &kp PAGE_UP     &kp LC(PG_UP)   &kp UP          &kp LC(PG_DN)   &kp DELETE
-            &kp TAB         &kp LCTRL       &kp LALT        &kp LGUI        &trans                                          &kp PAGE_DOWN   &kp LEFT        &kp DOWN        &kp RIGHT       &kp BSLH
+            &kp TAB         &kp LCTRL       &kp LALT        &sk LGUI        &trans                                          &kp PAGE_DOWN   &kp LEFT        &kp DOWN        &kp RIGHT       &kp BSLH
             &trans          &trans          &trans          &trans          &trans                                          &trans          &kp HOME        &kp END         &kp LC(SPACE)   &kp ENTER 
                                              &mo SYM         &kp LSHFT       &trans          &trans
             >;
@@ -117,9 +117,19 @@
         adj {
             bindings = <
             &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_CLR_ALL                                   &kp C_SLEEP     &trans          &trans          &kp C_BRI_DN    &kp C_BRI_UP
-            &studio_unlock  &trans          &trans          &trans          &trans                                           &trans          &ind_bat        &trans          &kp C_VOL_DN    &kp C_VOL_UP
+            &studio_unlock  &trans          &trans          &trans          &trans                                           &trans          &ind_bat        &tog game       &kp C_VOL_DN    &kp C_VOL_UP
             &bootloader     &trans          &trans          &trans          &trans                                           &trans          &trans          &trans          &trans          &bootloader
             &trans          &trans                                           &trans          &trans
+            >;
+        };
+	
+	// LAYER 4: gaming layer turning the left hand keeb into a wasd gaming controller
+	game {
+            bindings = <
+            &kp TAB         &kp Q           &kp W           &kp E           &kp R                                           &trans          &trans          &trans          &trans          &trans
+            &kp LCTRL       &kp A           &kp S           &kp D           &kp f                                           &trans          &ind_bat        &tog game       &trans          &trans
+            &kp LSHFT       &kp Z           &kp X           &kp C           &kp V                                           &trans          &trans          &trans          &trans          &trans
+            &kp SPACE          &kp SPACE                                           &trans          &trans
             >;
         };
     };
