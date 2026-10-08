@@ -38,7 +38,7 @@
         smart_shift: smart_shift {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&sk LSHFT>, <&caps_word>;
+            bindings = <&kp LSHFT>, <&caps_word>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         sym_bspc: left_thumb_hold_tap {
